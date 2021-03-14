@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>THREE JOKES and a fact</h1>
+    <p class="lead">Never be without a joke or a random fact.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        @using (Html.BeginForm("ProcessForm", "Home", FormMethod.Post))
+        {
+            <center><input name="ButtonName" type="submit" value="Chuck Norris Joke" /></center>
+            <hr />
+        }
+    </div>
+    <div class="col-md-3">
+        @using (Html.BeginForm("ProcessForm", "Home", FormMethod.Post))
+        {
+            <center><input name="ButtonName" type="submit" value="Two-part Joke" /></center>
+            <hr />
+        }
+    </div>
+    <div class="col-md-3">
+        @using (Html.BeginForm("ProcessForm", "Home", FormMethod.Post))
+        {
+            <center><input name="ButtonName" type="submit" value="Random Joke" /></center>
+            <hr />
+        }
+    </div>
+    <div class="col-md-3">
+        @using (Html.BeginForm("ProcessForm", "Home", FormMethod.Post))
+        {
+            <center><input name="ButtonName" type="submit" value="Random Fact" /></center>
+            <hr />
+        }
+    </div>
+</div>
+
+<div class="center-block">
+    <div class="col-md-offset-0">
+        <p><center><strong>@TempData["ResultP1"]</strong></center></p>
+        <p><center><strong>@TempData["ResultP2"]</strong></center></p>
+    </div>
+</div>
